@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header bg-warning">
+            New Employee
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    <label for="">Name:</label>
+                    <input type="text" [(ngModel)]="employeeObj.fullName" class="form-control" placeholder="Name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label for="">Email:</label>
+                    <input type="text" [(ngModel)]="employeeObj.email" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="col-3">
+                    <label for="">Phone:</label>
+                    <input type="text" [(ngModel)]="employeeObj.phone"  class="form-control" placeholder="Phone Number">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label for="">Gender: </label><br>
+                    <input type="radio" [(ngModel)]="employeeObj.gender"  value="Male" name="gender"> Male
+                    <input type="radio" [(ngModel)]="employeeObj.gender"  value="Female" name="gender"> Female
+                </div>
+                
+                <div class="col-3">
+                    <label for="">Date of Joining:</label>
+                    <input type="date" [(ngModel)]="employeeObj.dateOfJoining"  class="form-control" placeholder="Date of Joining">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-3">
+                    <label for="">Select Department:</label>
+                    <select [(ngModel)]="employeeObj.departmentId"  class="form-select">
+                        <option value=""></option>
+                    </select>
+                </div>
+                
+                <div class="col-3">
+                    <label for="">Select Designation:</label>
+                    <select [(ngModel)]="employeeObj.designationId"  class="form-select">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <label for="">Select Employee Type:</label>
+                    <select [(ngModel)]="employeeObj.employeeType"  class="form-select">
+                        <option value="">Select</option>
+                        <option value="Contract">Contract</option>
+                        <option value="Permanent">Permanent</option>
+                    </select>
+                </div>
+
+                <div class="col-3">
+                    <label for="">Salary:</label>
+                    <input [(ngModel)]="employeeObj.salary"  type="number" class="form-control" placeholder="Salary">
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-3 text-center">
+                    <button class="btn btn-secondary">Reset</button>
+                </div>
+
+                <div class="col-3">
+                    <button class="btn btn-success" (click)="onSaveEmployee()" >Save Employee</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
